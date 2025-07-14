@@ -13,16 +13,17 @@ def webhook():
 
     if direction == "buy":
         print(f"🟢 EMA BUY → Symbol: {symbol}, Lot: {lot}")
-        # 🧩 Future: MT5 Buy logic here
+        # ⏳ Future: send buy command to MT5 here
 
     elif direction == "sell":
         print(f"🔴 EMA SELL → Symbol: {symbol}, Lot: {lot}")
-        # 🧩 Future: MT5 Sell logic here
+        # ⏳ Future: send sell command to MT5 here
 
     else:
-        print("⚠ Unknown direction:", direction)
+        print("⚠ Unknown direction received:", direction)
 
-    return"OK",200
-    if __name__ = "__main__":
-        app.run(host="0.0.0.0", port=10000)
-    
+    return "OK", 200
+
+# 🟢 THIS PART IS REQUIRED FOR RENDER.COM
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
