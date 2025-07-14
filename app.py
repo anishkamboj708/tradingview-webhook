@@ -22,4 +22,4 @@ def webhook():
     else:
         print("⚠ Unknown direction:", direction)
 
-    return "OK", 200
+    return"OK",200
